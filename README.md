@@ -11,3 +11,6 @@
 
 ### ch05
 - Authentication, AuthenticationProvicer, SecurityContext
+
+### ch06
+- 실습
