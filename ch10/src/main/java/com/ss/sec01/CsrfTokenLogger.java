@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CsrfTokenLogger implements Filter {
 
 	private Logger logger = Logger.getLogger(CsrfTokenLogger.class.getName());

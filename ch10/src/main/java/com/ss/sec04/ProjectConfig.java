@@ -6,7 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 
-@Configuration
+//@Configuration
 public class ProjectConfig extends WebSecurityConfigurerAdapter {
 
 	@Bean

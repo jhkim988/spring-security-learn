@@ -12,7 +12,7 @@ import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.DefaultCsrfToken;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class CustomCsrfTokenRepository implements CsrfTokenRepository {
 
 	@Autowired

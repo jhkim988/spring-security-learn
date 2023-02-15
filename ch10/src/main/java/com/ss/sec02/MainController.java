@@ -3,7 +3,7 @@ package com.ss.sec02;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 public class MainController {
 
 	@GetMapping("/main")

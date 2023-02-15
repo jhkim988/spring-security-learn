@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/* localhost 와 127.0.0.1 은 같은 호스트라도 브라우저는 다른 문자열이라 다른 도메인으로 인식한다. */
+	const http = new XMLHttpRequest();
+	const url = 'http://127.0.0.1:8080/test';
+	http.open("POST", url);
+	http.send();
+	http.onreadystatechange = e => {
+		document.getElementById("output").innerHTML = http.responseText;
+	}
+</script>
+</head>
+<body>
+	<div id="output"></div>
+</body>
+</html>
