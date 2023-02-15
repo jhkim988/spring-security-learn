@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ss.sec04.TokenRepository">
+	<select id="findTokenByIdentifier" resultType="com.ss.sec04.Token">
+		select * from token where identifier = #{identifier}
+	</select>
+	<insert id="save">
+		insert into token (identifier, token) values (#{identifier}, #{token})
+	</insert>
+</mapper>
