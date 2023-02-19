@@ -3,6 +3,7 @@ package com.ss.ch13.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -29,8 +30,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return NoOpPasswordEncoder.getInstance();
 	}
 
+	@Bean
 	@Override
 	protected AuthenticationManager authenticationManager() throws Exception {
 		return super.authenticationManager();
-	}	
+	}
+
+	// 승인 코드 그랜트 유형을 지원하기 위한 로그인 리다이렉션
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.formLogin();
+	}
 }
